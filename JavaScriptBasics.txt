@@ -1,0 +1,241 @@
+1) $("selector").html("Put any html here")
+
+2) $("selector").append("append text to the existing text")
+
+3) $("selector").prepend("prepend text to the existing text")
+
+2) String functions:
+	1) .replace("text to replace","new text")
+	2) .toUpperCase()  // s[1].toUpperCase()
+	3) .slice(start, [end])  // remove the character at index range passed
+	4) + // String concatenation
+	5) .join("") // String concatenation
+	6) .split("separator character") // split the string based on the separator character and returns an array
+	7) .toLowerCase()
+	
+	
+3) Truthy (evaluate to true): true, non-zero numbers, "string" (string with length more than 0), object, arrays, functions
+	Falsy (evaluate to false): false, 0, "", null, NaN, undefined
+	
+	undefined -> variable doesn't exist or the interpreter doesn't understand what you're referring to. If you try to use a var that hasn't been defined, you get a ReferenceError. 
+	You will see undefined if you declare a variable but don't assign it any values. Like so:
+
+	var a;
+	a;
+	will result in undefined. But
+	b;
+	will result in a ReferenceError because b hasn't been declared yet.
+	
+	null -> variable exist but has no value
+	NaN -> is not a number, is a value that turns up when we ask Javascript to do certain impossible things in arithmetic -- like divide zero by zero.
+	
+4) Arrars : var skills = ["Awesomeness", "Javascript", "Git"]
+	$("#main").append(skills); //AwesomenessJavascriptGit
+	$("#main").append(skills[0]) //Awesomeness
+	
+	skills.length // 3
+	
+	.push(element)  // Inserts the element at the end of the array, hence length of the array increases by 1
+	.pop() // Removes an element from the end of the array, hence length gets decreased by 1
+	.slice(start, [end]) // separates the characters of a string, array.slice(begin, [end]) separates the elements of an array from the index of the begin up to but not including end.
+	
+5) Objects
+	Object Literal Notation
+		var object = {
+			"name":"Deepak Aneja",
+			"contact" : {
+				"mobile" : "",
+				"email" : ""
+			}
+			"welcomeMessage" : "",
+			"skills" : [
+					"",""
+				]
+			"bioPic":"images/deepakaneja.jpg"
+		}
+		
+	Object Dot Notation:
+		var work = {};
+		work.position = "";
+		work.employer = "";
+		work.years = 5;
+		
+	Object Bracket Notation:
+		var education = {};
+		education["work"] ="";
+		education{"employter"} = "";
+		
+	Dot notation vs square bracket notation in javascript : http://www.dev-archive.net/articles/js-dot-notation/
+		
+6) The style elements that you can change through javascript. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
+
+	document.getElementById("id").style.display = "none";
+	document.getElementsByclassName("className").style.backgroundColor = "black";
+	
+	HTMLElement.style : https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
+	
+7) encodeURIComponent(string) : to html encode the content.
+
+8) Strict equality (===) vs Loose equality (==)
+
+	When you use three equal signs, ===, no type conversion is done prior to the comparison. If the values are different types, for example, a String and a Number, they can't ever be equal. 
+	To return true, the values must be equal and the types must be the same.
+
+	Loose equality, ==, checks to see if the two values are the same type and if not, converts to a common type before the conversion. 
+	If the types are already the same, there is no difference between the result of === and ==. When they aren't it can cause unexpected results.
+	
+	the same conditions apply for strict inequality (!==) and loose inequality (!=). Loose inequality is more forgiving than loose equality so you might not see strict inequality as often.
+	
+	
+9) while loop in javascript: Same as other languages
+
+10) if-else is also same as other languages
+
+11) for, forEach and for-in : This is interesting, have a look
+
+	Use forEach or for to iterate over arrays like:
+	countries = ['Argentina', 'China', 'England'];
+	
+	Use for-in to loop over objects like
+	countries = {'country1':'Argentina', 'country2':'China','country3':'England'};
+	
+	being careful to wrap the content of the for-in in a conditional statement that tests if the key is part of the object:
+	myObj = {'country1':'Germany', 'country2':'Argentina'};
+	for (key in myObj){
+		if (myObj.hasOwnProperty(key)) {
+			console.log(myObj[key]);
+		}
+	}
+	
+	When using for-in to iterate over the arrays, the key is actually the index of the array.
+	
+12) The :last jQuery selector returns the final element in a list that matches whatever precedes it. So for work-entry:last, if there are 3 work-entry elements, it will only return the 3rd one.
+
+13) Functions
+
+	Functions can be defined in 2 ways in javascript:
+	1) var myFunc = function(param1, param2) {}
+	2) function myFunc(param1, param2) {}
+	3) functions can be anonymous as well. like document.click(function(){}) // Here is an anonymous function
+	
+	Here is difference between two types of function declarions:
+	As you've learned in this course, there are two syntaxes to declare functions
+
+		var functionName = function() {}
+
+		and
+
+		function functionName() {}
+
+		The JavaScript interpreter, which is responsible for taking the code you write and preparing it to become machine code, will handle the two function declarations slightly differently because of the way it handles variable declarations.
+
+		All variable declarations will immediately get moved to the top of their scope. For example:
+
+		var x = 5;
+		console.log(x); // 5
+		var y = 10;
+		is the same as
+		var x, y; // this line simply declares x and y at the same time.
+		x = 5;
+		console.log(x); // 5
+		y = 10;
+		Notice how the declaration of y moved to the top of the scope. And also notice how the first line doesn't set a value for neither x nor y. After var x, y; both x and y are undefined.
+
+		The same behavior holds true for other types of variables, including functions. If you use the var functionName syntax, only the function's declaration (e.g. var functionName;) gets moved at the top of its scope. 
+		However, if you use function functionName() syntax, 
+		the function declaration and definition (the actual instructions inside the function) get moved to the top of the function's scope.
+		
+		You can also assign to a variable without declaring it. Like:
+		
+		helloVar = "someValue":
+		
+		In the above case helloVar will be declared on top of the file and will have a global scope.
+	
+14) If statements do not create their own block scope. In below example, both console.log will print Second string because outside example will be overridden by first declaration.
+
+		var outsideExample = "First string";
+		if (true) {
+			var outsideExample = "Second string";
+			console.log(outsideExample);
+		}
+		console.log(outsideExample);
+		
+	But functions do have block scope. So if we replace if statment with a function, then the output would have printed Second String and then First String.
+	So JavaScript does not have a block scope, i.e. if, for, while does not have any block scope.
+	
+15) "Can't compare relationships because [this value] and [that value] [is]/[are] not [a] number[s]."
+
+16) Mozilla JavaScript Basics : https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics (1 hour)
+
+17) Introduct to for and while loops in javascript: https://www.codecademy.com/courses/javascript-beginner-en-NhsaT/0/1
+	https://www.codecademy.com/courses/javascript-beginner-en-ASGIv/0/1
+	
+18) Lexical scope vs Execution context : lexical scopes are global scope and function scope. (if, if, for, while does not have any block scope in javascript)
+	Closures: you can store a function object in an array. And the execution context that it creates at the time of execution is within that scope only in which it was pushed to the array.
+	In example below everytime, sagas[0]() is invoked, its execution context will be created within first newSaga() execution context only.
+	
+	Example:
+	var sagas = [];
+	var hero = aHero();
+	var newSaga = function(){
+		var foil = aFoil();
+		sagas.push(function(){
+			var deed = aDeed();
+			log(hero+deed+foil);
+		})
+	};
+	newSaga();
+	sagas[0]();
+	sagas[0]();
+	newSaga();
+	sagas[0]();
+	sagas[1]();
+	sagas[0]();
+	
+19) this : the current object on which the function is invoked. 
+	Example: 
+		var fn = function(a,b){log(this)};
+		var r = {};
+		r.method = fn;
+		r.method(2,3);
+	
+	In the above case, this will refer to the object r. So the rule of thumb is the object on the left of dot will be referred by this.
+	
+	What if there is nothing on left of dot (.). In that case this will refer to the global object.
+	Example: 	
+		fn(2,3);
+	
+	In the above case, this will refer to the global object.
+	
+	Now the interesting thing, you can bind an method definition to an explicit object as well to which that function is not added as the property. For that you can invoke the function using call method explicitly.
+
+	Example.
+		var obj = {};
+		fn.call(obj,2,3);
+	So in the above case, this will refer to the fn object.
+	
+	Trick question:
+		r.method.call(obj, 1,6); // In this case, this will also refer to obj.
+		
+20) What if i call the above function fn without any parameters? Ans: It will be invoked with two undefined objects.
+	i.e. fn() is equivalent to fn(undefined, undefined);
+	
+21) var obj2 = extend({}, obj1); // It only does one-time copying of properties from obj1 to obj2. 
+	
+21) var obj2 = Object.create(obj1);
+	It will create a new obj2 and obj1 will be a fallback object of obj1. If any property is not found in obj2, then interpreter will look that property in obj1.
+	Its like obj2 is a prototype of obj1, and that creates a prototype chain. If a property is found in the obj2 itself, prototype chain is never consulted.
+	This is just like inheritance in c# or Java.
+	
+23) Every object in javascript is a prototype of a global object, called the Object prototype. Just like in c# or java every class is a subclass of Object.
+
+24) And that global Object prototype has following properties.
+	i) toString()
+	ii) hasOwnProperty()
+	iii) constructor : Object
+	
+25) There is also an Array prototype from which all user defined arrays are prototyped. And that Array prototype is again a prototype of global Object prototype.
+	Array prototype has following properties:
+	i) slice()
+	ii) toString()
+	iii) constructor: Array

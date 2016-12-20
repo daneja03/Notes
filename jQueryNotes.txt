@@ -1,0 +1,137 @@
+1) jQuery is a function and fuctions are objects in javascript. So if you type jQuery in your browser console after opening a website that uses jQuery, it will return a function.
+
+2) $ is an alias of jQuery function. Both are same. You can assign this alias to some string as well like var $ = "MyOwnAlias"; Then original definition of $ will get changed.
+
+3) jQuery or $ : its a collection, like an array but with some additional methods. You can pass following things into a jQuery objects
+	$(string), $(function), $(DOMelement), $.ajax (Yes you can invoke functions as well.)
+	
+4) Hosting jQuery from from CDN is better because they are much faster and also allow you to use the browser caching capabilities. And use the minified version of jQuery. 
+
+5) jQuery Selectors : $('tag'), $('#id'), $('.className') // You can use single quote (') well as double quotes (") for the selectors in jQuery Object. 
+
+6) jQuery DOM Traversal : $(Selector).parent(), $(Selector). parents(), $(selector).children(), $(selector).find(), $(selector).siblings()
+	i) $(selector).parent() : will return the immediate parent.
+	ii) $(selector).parents() : will return all immediate parents. 
+		$(selector).parents(selector) : you can pass in a selector to filter from all the parents.
+	iii) $(selector).children() : will return one immediate child element
+			$(selector).children(selector) : It will search for the passed selector within its children
+	iv) $(selector).find(selector) : will return all children if you pass '*' to it.
+		$(selector).find(selector) : to find a specific child from by passing a selector, like 'div' or 'h1'
+	v) $(selector).siblings()
+
+7) '*' is considered as the universal selector.
+
+8) .toggleClass('className') : toggles the specified class on the selected element.
+	.addClass('className')
+	.removeClass('className')
+	
+	You can do the same thing that toggleClass does with addClass() and removeClass() methods.
+
+9) .next('selector') : gives the next element from the siblings.
+
+10) .attr('attributeName') : gets the attribute value
+	.attr('attributeName', 'value') : sets the attribute value
+	Example: $('.nav-list').children().first().find('a').attr('href', '#1');
+	
+11) .css('propertyName') : gets the value of the propertyName
+	.css('propertyName', 'value') : sets the value for the property passed.
+	
+12) .val() : Get the value attribute of a form element.
+	.html() : Gets the html within that element.
+	.text() : Gets all the text within that element after stripping html tags.
+	.val(value) : sets the value attribute on the selector.
+	.html(value) : sets the inner html for that selector
+	.text(value) : sets the text for that element.
+	
+13) .remove() : to remove a DOM element.
+	.remove('selector') : 
+	
+14) .append(), .prepend(), .insertBefore(), .insertAfter(), 
+
+15) .each() : To iterate over each element in jQuery object collection. It takes in a function and executes that on each selector element.
+	$(this) : refers to the current element.
+	
+16) document.ready() or $(document).ready() or $(functionName) are same thing.
+
+17) Google Chrome's monitorEvents() function. It takes an element and shows all event logs on that element.
+
+18) jQuery Events: 
+	Reacting to events often requires knowledge about the event itself, so this is a quick breakdown of the event object which gets passed to an event listener’s callback.
+
+	Remember that the target element calls the callback function when the event occurs. When this function is called, jQuery passes an event object to it containing information about the event. This object holds a ton of useful information that can be used in the body of the function. This object, which is usually referenced in JavaScript as e, evt, or event, has several properties that you can use to determine the flow of your code. Try logging the object to see what's available:
+
+	$( 'article' ).on( 'click', function( evt ) {
+		console.log( evt );
+	});
+	You should notice a target property. The target property holds the page element that is the target of the event. This can be extremely useful if an event listener has been set up for a number of elements:
+
+	$( 'article' ).on( 'click', function( evt ) {
+		$( evt.target ).css( 'background', 'red' );
+	});
+	In the example above, an event listener is set up for every article element on the page. When an article is clicked an object containing information about the event is passed to the callback. The evt.target property can be used to access just the clicked on element! jQuery is used to select just that one element from the DOM and update its background to red.
+
+	The event object also comes in handy when you want to prevent the default action that the browser would perform. For example, setting up a click event listener on an anchor link:
+
+	$( '#myAnchor' ).on( 'click', function( evt ) {
+		console.log( 'You clicked a link!' );
+	});
+	Clicking on the #myAnchor link will log the message to the console, but it will also navigate to that element's href attribute - potentially redirecting to a new page. The event object can be used to prevent the default action:
+
+	$( '#myAnchor' ).on( 'click', function( evt ) {
+		evt.preventDefault();
+		console.log( 'You clicked a link!' );
+	});
+	In the code above, the evt.preventDefault(); line instructs the browser not to perform the default action.
+
+	Other uses include:
+
+	event.keyCode to learn what key was pressed - invaluable if you need to listen for a specific key
+	event.pageX and event.pageY to know where on the page the click occurred - helpful for analytics tracking
+	event.type to find what event happened - useful if listening to a target for multiple events
+	
+19) jQuery convenience methods : http://api.jquery.com/category/events/
+
+	You can use jquery convenience methods to call an event on a target. For that, you don't need to use target.on("eventName", handler). You can simply do target.eventName(handler).
+	Example: $("#myButton").on("click", handler) or $("#myButton").click(handler) are same.
+	
+	.hover is not a convenience method for an event. Its a sequence of mouseenter and mouseleave event.
+	
+20) jquery Event delegation: 
+
+	The jQuery event listener examples we've been looking at so far select the target item(s) using jQuery and then attach an event listener to that target directly. But what about when the target doesn't exist yet? This can happen in a lot of situations. For example, if you have a list of items, and you want to listen to clicks on any of them, what happens if you add an extra list item after your page is done?
+
+	Be careful when setting up an event listener and then creating the target item afterwards. For example:
+
+	$( 'article' ).on( 'click', function() {
+		$( 'body' ).addClass( 'selected' );   
+	});
+
+	$( 'body' ).append( '<article> <h1>Appended Article</h1> <p>Content for the new article </p> </article>' );
+	Clicking on the "appended" article will not add a class to the body because the "appended" article was created after the event listeners were set up. When we targeted the 'article', it didn't exist yet, so jQuery added the click listener to all ZERO of our articles!
+
+	But there is a way to make this scenario work by using Event Delegation. We'll listen to events that hit a parent element, and pay attention to the target of those events. Event Delegation with jQuery uses the same code we've been using, but passes an additional argument to the "on" method.
+
+	$( '.container' ).on( 'click', 'article', function() { … });
+	...this code tells jQuery to watch the .container element for clicks, and then if there are any, check if the click event's target is an article element.
+
+	Another advantage in using Event Delegation is that you can use it to consolidate the number of event listeners. For example, what if you had 1,000 list items on a page:
+
+	<ul id="rooms">
+		<li>Room 1</li>
+		<li>Room 2</li>
+				.
+				.
+				.
+		<li>Room 999</li>
+		<li>Room 1000</li>
+	</ul>
+	The following code would set up an event listener for each 1,000 event listeners - one for each list item...that's 1,000 event listeners!
+
+	$( '#rooms li' ).on( 'click', function() {
+		...
+	});
+	Alternatively, we can use jQuery's event delegation to set the event listener on just one element (the ul#rooms) and check if the target element is a list item;
+
+	$( '#rooms' ).on( 'click', 'li', function() {
+		...
+	});

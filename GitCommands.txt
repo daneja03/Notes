@@ -1,0 +1,96 @@
+git --version
+
+git log 
+git log [--stat] (It will give you some statistics about that commit. Each commit also shows which files were affected as part of that commit.)
+
+git diff
+
+git diff [firstCommitId] [secondCommitId]
+
+git config --global color.ui auto
+
+q (Stands for quit, when you do git log and just want quit git log output)
+
+HEAD : The commit you're currently working on. You can 'detach' the head by swithcing to a previous commit, which we'll see in the next video. 
+		Despite what iy soulds like, its actually not a bad thing to detach the head. Git just warnds you so that you'll realize you're doing it.
+		
+alias subl 'C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
+git config --global core.editor "'Path to the exe which you want to make the default editor for git' -n -w" : -n -w means it will always open in a new windwon.
+
+git config --global push.default upstream
+
+git config --global merge.conflictstyle diff3
+
+git status  (Tells you which branch you currently in and also tells you the untracked files if you have any, and any uncommitted file.s)
+
+git add  (To add the untracked files to the staging. Files in staging area are ready to be commit)
+
+git reset  (If you want to unstage any file that you have staged, you can rollback by using this commit)
+
+git reset --hard (Discard any changes in the staging area and the working directory)
+
+Udacity commit style guide : (http://udacity.github.io/git-styleguide/)
+type: subject
+
+body
+
+footer
+
+type : feat (feature), fix, docs, style, refactor, test, chore
+
+Git commands Cheat codes, you can find all git commands on one place here : https://github.com/github/training-kit/blob/master/downloads/github-git-cheat-sheet.pdf
+
+git diff (Git diff with no arguments compares changes in the working directory with the staging area)
+
+git diff --staged (If you want to compare changes in staging area with the actual repository, you can do that )
+
+git checkout master (switching branch, to the head of the branch)
+
+If you're interested in learning git internals: https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+git log --graph --oneline master coins  (To view the commit history on two branches with some graphical interface)
+
+git branch new-branch-name
+git checkout new-branch-name
+
+git checkout -b new-branch-name (Equivalent to the combination of above two commands)
+
+git gc (To manually run the garbage collection in git, that will delete all the commit history for the branches which are unlabelled)
+
+git log -n 1  (To view specified number of commits, in this case only 1 commit)
+
+git merge target_branch_name source_branch_name (git merge master coins  (current branch is master i.e. merging coins into master branch)). Also, since the two branches are merged, the order in which they are 
+			typed into the command line does not matter. The key is to remember that git merge always merges all the specified branches into the currently checked out branch, creating a new commit for that branch.
+
+git show commit_id(After the merge, when you do git log commits from both the merged branches are showen in interleaved manner depending on their creation time. So if you do git diff between two consecutive branches then they may not
+			be next to each other or there is no child-parent between them. Run git show, it automatically fetches the parent commit of the commit passed and show the different.)
+
+git branch -D branch_label (It will only delete the branch label, but not the commits. That can only be deleted by git garbage collection or manually running git gc)
+
+git merge --abort
+
+git config --global core.autocrlf true. : Caroline's files have LF because her files were edited on Mac OSX, which uses LF. If a Windows user were to edit Caroline's files, 
+	the Windows text editor might convert all LF to CRLF to make editing files possible. When the Windows user merges her file with Caroline's files, a merge conflict will result due to the different LF and CRLF characters.
+	
+git remote
+
+git remote add {repo_url}
+
+git remote -v
+
+git remote remove {origin_repo_label}
+
+git clone automatically sets up the remote.
+
+git fetch : Updates the local copy of your remote branch, then you can invoke git merge master origin/master to merge the remote copy into your local master branch.
+
+git pull origin master : This shortcut of git fetch followed by git merge master origin/master
+
+git fetch origin : updates the local copy of all your remote branches with origin remote
+
+fast forward merge : When the commits you are merging has a parent child-relationship. Or one commit is the parent of another, then fast forward merge happens.
+	In fast forward merge, to merge commit is created. As you know a merge commit has references to both the commits as its parent.
+	Fast fordward merge updates the branch label to the most recent commit, tip of the branch. There is no point in storing two parent commits because
+	anyways one is the ancestor of other.
+	
+git log and git status works in offline mode
