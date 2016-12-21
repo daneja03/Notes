@@ -191,6 +191,8 @@
 	sagas[0]();
 	sagas[1]();
 	sagas[0]();
+
+	JavaScript closures : Keep in mind and read it more if required.
 	
 19) this : the current object on which the function is invoked. 
 	Example: 
@@ -226,6 +228,9 @@
 	It will create a new obj2 and obj1 will be a fallback object of obj1. If any property is not found in obj2, then interpreter will look that property in obj1.
 	Its like obj2 is a prototype of obj1, and that creates a prototype chain. If a property is found in the obj2 itself, prototype chain is never consulted.
 	This is just like inheritance in c# or Java.
+
+	This is also known as Delegating Relationships. It is helpful when you create multiple class that share common set of methods, then you can set a fallback to those
+	set of methods.
 	
 23) Every object in javascript is a prototype of a global object, called the Object prototype. Just like in c# or java every class is a subclass of Object.
 
@@ -239,3 +244,83 @@
 	i) slice()
 	ii) toString()
 	iii) constructor: Array
+
+
+26) Object decorators in javascript:
+	var carLike = function(obj, loc){
+		obj.loc = loc;
+		var move = function(){
+			obj.loc++;
+		}
+	}
+
+	Classes in JavaScript:
+	var Car = function(loc){
+		var obj = {};
+		obj.loc = loc;
+		obj.move = function(){
+			obj.loc++;
+		}
+		return obj;
+	}
+
+	The only difference between an object decorator and a class in JavaScript is that decorator takes in the object itself as the parameter.
+	But class creates the object instance and returns it and thus this is function is called as a Constructor.
+
+27) Car.prototype.constructor : refers to the Car itself.
+	we use Object.create for creating prototypes, or in other words we setup a fallback in case that property is not found in the current definition, then it will look for in the setup	
+	prototype.
+
+	Example: 
+		var Car = function(loc){
+			var obj = Object.create(Car.prototype);
+			obj.loc = loc;
+			return obj;
+		};
+
+		Car.prototype.move = function(){
+			this.loc++;
+		};
+
+
+28) instanceof operator in JavaScript: returns true or false if passed instance returns the same class name when {instance} instanceof {Class}.
+	Example: 
+	var amy = Car();
+	amy instanceof Car // true
+
+	But if Car definition was like this:
+	var Car = function(loc){
+		var obj = {loc:loc};
+		obj.move = function(){};
+	}
+
+	var dogy = Car();
+	dogy instanceof Car // false
+
+29) new keyword in JavaScript:
+	var amy = new Car();
+
+	So when you invoke a function with a new keyword, then interpreter inserts Object.create() statment and return statement by default as the first line and last line of the function.
+	So we can simplify our definition of Car class like:
+	var Car = function(loc){
+		// this = Object.create(Car.prototype); // This line will be inserted by the interpreter when you invoke this function with a new keyword.
+		this.loc = loc;
+		// return this; // Will be inserted by the interpreter when you invoke this function with new keyword.
+	}
+
+30) So till now, we have studied Functional Classes, Prototypical Classes and Pseudoclassical Patterns.
+
+31) Superclasses and Subclasses.
+	var Car = function(){
+		var obj = {loc:loc};
+		var move = function(){
+			obj.loc++;
+		}
+		return obj;
+	}
+
+	var Van = function(){
+		var obj = Car();
+		obj.grab = function(){};
+		return obj;
+	}
