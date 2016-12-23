@@ -214,7 +214,7 @@
 	Example.
 		var obj = {};
 		fn.call(obj,2,3);
-	So in the above case, this will refer to the fn object.
+	So in the above case, this will refer to the obj.
 	
 	Trick question:
 		r.method.call(obj, 1,6); // In this case, this will also refer to obj.
@@ -324,3 +324,26 @@
 		obj.grab = function(){};
 		return obj;
 	}
+
+	But thats confusing, i can do Car.call(this,loc) from within the Van function and do new Van() in my client code.
+
+32) Van.prototype will refer to Object.prototype if no user defined prototype existis for Van function.
+	var Van = function(loc){
+		//Some Code
+	}
+
+	// Van.prototype is not defined, so it will refer to Object.prototype by default.
+
+33) Van.prototype = Object.create(Car.prototype);
+
+34) trying to do the dot access on any undefined or null value throws an error. 
+
+35) var amy = new Van(9);
+	console.log(amy.constructor); // It will log Car, because Van constructor property still falls back to Car.
+
+	To resolve this, one has to manually set the constructor property of the Van function of Van itself.
+	So it would be:
+
+	Van.prototype.constructor = Van: // As simple as that.
+
+36) Object oriented javascript course in Udacity is a must take take course if you want to understand the core features of javascript. 
