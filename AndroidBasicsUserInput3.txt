@@ -1,0 +1,118 @@
+* JavaDoc comment : https://en.wikipedia.org/wiki/Javadoc
+
+* Resources Overview : http://developer.android.com/guide/topics/resources/overview.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Accessing Resources : http://developer.android.com/guide/topics/resources/accessing-resources.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Supporting Multiple Screens : http://developer.android.com/guide/practices/screens_support.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Providing Resources : http://developer.android.com/guide/topics/resources/providing-resources.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* If interesting in downloading android source code: https://source.android.com/source/downloading.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Do add the android sdk search extension to your chrome browser.
+
+* onClick Handler Eat Cookie Project : https://classroom.udacity.com/courses/ud836/lessons/4619208555/concepts/45821199720923
+
+* Logcat : https://classroom.udacity.com/courses/ud836/lessons/4619208555/concepts/45760803710923
+
+More : http://developer.android.com/tools/debugging/debugging-log.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Why learning code is so hard: http://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard
+
+* Pop up a Toast Message : http://developer.android.com/guide/topics/ui/notifiers/toasts.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Common Intents Guide : http://developer.android.com/guide/components/intents-common.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Manage string resources : https://developer.android.com/distribute/tools/localization-checklist.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#manage-strings
+
+* Localization Checklist : http://developer.android.com/distribute/tools/localization-checklist.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* How to localize a google glass app: https://www.youtube.com/watch?v=_b0iU2LzlUo
+
+* Styles : http://developer.android.com/guide/topics/ui/themes.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Style Resource : https://developer.android.com/guide/topics/resources/style-resource.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Supporting different screen sizes : https://developer.android.com/training/multiscreen/screensizes.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#TaskUseSWQuali
+
+* Keyline Pushing App : https://play.google.com/store/apps/details?id=com.faizmalkani.keylines&hl=en
+
+* Using the material theme : https://developer.android.com/training/material/theme.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Maintaining Compatibility : https://developer.android.com/training/material/compatibility.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* App Manifest : https://developer.android.com/guide/topics/manifest/manifest-intro.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* More on Android Styles and Themes : https://www.tutorialspoint.com/android/android_styles_and_themes.htm
+
+* Consistent Design with AppCompat : https://www.youtube.com/watch?v=5Be2mJzP-Uw
+
+* Build for tablets - We've be focusing on designs for phones, but with resource files, you can actually create custom layouts for your larger devices, such as tablets. Here's some documentation to get you started.
+
+Supporting Tablets and Handsets : https://developer.android.com/guide/practices/tablets-and-handsets.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Create lists - You'll often find android apps that have long lists of items a user could click on - think of messages in an inbox, or stories in a news feed. Creating lists like this is greatly optimized when someone used a view like RecyclerView.
+
+https://developer.android.com/training/material/lists-cards.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#RecyclerView
+
+* Create cards - Cards, not to be confused with your awesome Birthday Card, are a special kind of Material Design inspired view that has rounded corners and a slight shadow. If you've ever used Google Now, you've seen a card. Check out this documentation to see how to add card elements to your app.
+
+https://developer.android.com/training/material/lists-cards.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#CardView
+
+* Load up things from the internet - Want to load text or images from the internet? Check out the volley library, for general purpose loading of web data. Glide is a great choice for loading images from the web. You can check out this lesson from the Libraries lesson of Advanced Android Development to see how to incorporate libraries like these.
+
+Volley Library: https://developer.android.com/training/volley/index.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+Glide : https://github.com/bumptech/glide
+
+* Store data on the device - Does your app need any information saved between launches? Maybe you want to keep a history of all coffees bought with JustJava. To do this, you would need to save some data associated with the app. Check out the Android documentation on data storage for your options.
+
+https://developer.android.com/guide/topics/data/data-storage.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Post notifications - Notifications are messages that the user sees outside of your app. They appear in the status bar. You can then pull the status bar down to see more details about the notification. When you get a text message, for example, many times your phone will beep and show you a notification so that you can easily view the text. To learn more about designing notifications, check out this Android guide.
+
+Notifications : https://developer.android.com/guide/topics/ui/notifiers/notifications.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+Notifications Material Io : https://material.io/guidelines/patterns/notifications.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Do background operations - Perhaps you want to create an app that does something, even when it's not visibly on the screen. For example, a music player application, that plays music as you so other things on your phone. Or a messaging application that pulls down the latest chats sent to you. For this, you'll need to learn more about creating services.
+
+Creating Services: https://developer.android.com/training/run-background-service/create-service.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Use Google Play services - Using Google Play Services is a library of Google code that gives you access to popular functionality, such as phone location, authentication (information and ability to “log in") and even fitness data. Check out some of the recent updates here.
+
+https://www.youtube.com/watch?v=M3Udfu6qidk
+
+
+* Use location - Access to location is one of the many capabilities offered by Google Play services. By figuring out where a user is physically located, your app can give them more data about their surrounding and customize itself to their specific needs. Google Maps, for example, can find nearby restaurants in this manner. Check out our class on Location and Context, which is part of a larger series of mini courses on all of the Google Play Services.
+
+Location and Context : https://www.udacity.com/course/google-play-services-location-context--ud876-1
+
+
+* Add analytics - Ever wondered who is using your app? Or how they are using it? By collecting this data you can make informed decisions about what features to add, update or fix. Analytics is also included in the Google Play Services libraries. Check out our course on Analytics.
+
+* Build for other form factors - It doesn't stop at tablets; the android operating system (and therefore your apps) run on watches, TVs, even in cars. If it makes sense, you can have different versions of your app for these different “form factors". The Maps App, for example, can give you directions on your phone, or your watch, or while you're driving around. The base functionality is the same, but it's been re-designed and tweaked for each interface. Check out our Ubiquitious Design course.
+
+* Play sound - Add sounds to your apps, whether is be short clips for a game or playback capabilities for a podcast app. Check out Google's guide to Media Playback.
+
+Media Playback : http://developer.android.com/guide/topics/media/mediaplayer.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Animations - Subtle animations that give your views a real sense of space and physical existence are an integral part of material design. Check out the documentation on animations to add things like cross fading, zooming and flipping animations to your layouts.
+
+http://developer.android.com/training/animation/index.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Create server backend for your app - A stand alone app is great, but what makes an app really powerful is if it is connected to your own web server. Web servers can help organize and process data from across the world and send it to your user's phone. Any Google App more complicated than the alarm is accessing some sort of google server. Servers store everything from your Calendar events, to your friend's G+ photos. Learn more about building a scalable web server in Java or Python.
+
+* Fitness - Ever wanted to make an app that will help users take control of their health and fitness? Google Fit is Google's open platform with user fitness data. Check out the documentation.
+
+https://developers.google.com/fit/?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Test out the latest N Developer Preview - To get the bleeding edge latest version of the Android platform, you can try out the Android N Developer Preview. We make an early version of the platform available to developers so they can prepare and test their app before the N (Nougat) release launches to the public. Check out this video.
+
+* All these links can be found at : https://classroom.udacity.com/courses/ud836/lessons/4584545214/concepts/45827028440923#
+
+* Case Study : Peek Vision
+
+* Quiz App Project Rubric : https://review.udacity.com/#!/rubrics/158/view
+Project Overview : https://classroom.udacity.com/courses/ud836/lessons/6767261086239847/concepts/78270406590923#

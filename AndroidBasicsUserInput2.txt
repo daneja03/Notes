@@ -1,0 +1,58 @@
+* Reformat source code: https://www.jetbrains.com/idea/help/reformatting-source-code.html
+
+* Rearrange source code: https://www.jetbrains.com/idea/help/rearranging-code-using-arrangement-rules.html
+
+* Helpful Keyboard shortcuts : https://developer.android.com/sdk/installing/studio-tips.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#key-commands
+
+* Debug Code in Android Studio : https://developer.android.com/tools/debugging/debugging-studio.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Escape sequence in Java : https://docs.oracle.com/javase/tutorial/java/data/characters.html
+
+* layout_gravity : http://developer.android.com/reference/android/widget/LinearLayout.LayoutParams.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#attr_android:layout_gravity
+
+* gravity : http://developer.android.com/reference/android/widget/LinearLayout.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#attr_android:gravity
+
+* gravity and layout_gravity : http://stackoverflow.com/questions/3482742/gravity-and-layout-gravity-on-android
+
+* Court Counter App Project : https://classroom.udacity.com/courses/ud836/lessons/4036438656/concepts/43862685810923
+
+* Case Study : PulsePoint
+
+* Key Terms :
+
+Programming language
+Java
+Event-driven programming
+Activity
+Comments
+Package name
+Import statements
+Class name
+onCreate()
+onClick
+Execute
+Method
+Calling
+Expressions
+Variables
+Robust
+Data type
+int
+Variable name
+Assignment operator
+Initializing
+Debug
+Crashes
+Compile time error
+Runtime error
+System log
+Stacktrace
+Debugger
+Pseudocode
+Variable declaration
+Variable scope
+Local variables
+Global variable
+Variable declaration
+Nested ViewGroups
+String

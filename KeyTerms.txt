@@ -1,0 +1,38 @@
+Keywords:
+
+Programming language
+Java
+Event-driven programming
+Activity
+Comments
+Package name
+Import statements
+Class name
+onCreate()
+onClick
+Execute
+Method
+Calling
+Expressions
+Variables
+Robust
+Data type
+int
+Variable name
+Assignment operator
+Initializing
+Debug
+Crashes
+Compile time error
+Runtime error
+System log
+Stacktrace
+Debugger
+Pseudocode
+Variable declaration
+Variable scope
+Local variables
+Global variable
+Variable declaration
+Nested ViewGroups
+String

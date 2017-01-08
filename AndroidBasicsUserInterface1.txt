@@ -1,0 +1,74 @@
+* Android Vocabulary : https://developers.google.com/android/for-all/vocab-words/?hl=en
+  Check out the glossary for a beautiful image, description, and code sample.
+
+* What does Density Independent Pixel actually mean? You might be familiar with a pixel, which is a small illuminated area on a screen. Screens are essentially made up of hundreds of thousands of these pixels.
+
+So what is a "density independent" pixel? Well, better screens will often have more pixels in the same amount of space. The number of pixels in a fixed space is known as the screen's pixel density. In case you're wondering, 48dp translates to approximately 9mm in physical size.
+
+More info : https://material.io/guidelines/layout/metrics-keylines.html#metrics-keylines-touch-target-size
+
+* Common Views Cheatsheet : https://drive.google.com/file/d/0B5XIkMkayHgRMVljUVIyZzNmQUU/view?usp=sharing
+
+* Material Design Typography Guidelines : http://www.google.com/design/spec/style/typography.html#typography-styles 
+
+* Google+ Android Developer Pro Tip about text appearance : https://plus.google.com/+AndroidDevelopers/posts/gQuBtnuk6iG
+
+* Material Design color palette: http://www.google.com/design/spec/style/color.html#color-color-palette 
+
+* LinearLayout weight, equally spaced children : http://developer.android.com/guide/topics/ui/layout/linear.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+http://stackoverflow.com/questions/3470420/is-it-possible-to-evenly-distribute-buttons-across-the-width-of-an-android-linea
+
+* Relative Layout Documentation : http://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+  Relative Layout Parameters : http://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* ConstraintLayout thing/ Layout Editor: http://tools.android.com/tech-docs/layout-editor
+
+* xmlns Attributes : http://www.w3schools.com/xml/xml_namespaces.asp
+
+* OEM Drivers Website : http://developer.android.com/tools/extras/oem-usb.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* Setting The Font
+You may need a minSDKVersion greater than or equal to 16 to use the fontFamily attribute.
+
+* Case Study : Charity Miles (Its Really Awesome!)
+
+* Single Page App Project Rubrics : https://review.udacity.com/#!/rubrics/133/view
+
+* Keywords:
+
+Layout
+User Interface
+TextView
+ImageView
+Button
+Camel case
+Integrated development environment
+Code
+XML
+XML element
+Tag
+Self-closing tags
+Attributes
+Syntax
+Android Studio
+Device
+Density Independent Pixels
+Hard coding
+wrap_content
+Scale Independent Pixels
+Documentation
+ViewGroups
+Root View
+Parent
+Child
+Sibling
+LinearLayout
+RelativeLayout
+match_parent
+ViewGroup layout parameter
+layout_weight
+id
+Padding
+Margin
