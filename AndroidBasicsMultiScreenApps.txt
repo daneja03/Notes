@@ -1,0 +1,7 @@
+* Memory Monitor: https://developer.android.com/studio/profile/am-memory.html?utm_source=udacity&utm_medium=course&utm_campaign=android_basics
+
+* ListView and ArrayAdaptor: https://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView
+
+* The world of ListView : https://www.youtube.com/watch?v=wDBM6wVEO70
+
+* 
